@@ -1,0 +1,75 @@
+﻿<Window x:Class="naloga.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:naloga"
+        mc:Ignorable="d"
+        Title="Baza ljudi" Height="600" Width="600" FontSize="16" Margin="20,2,20,2" FontFamily="Arial Narrow">
+
+    <Grid Margin="0,6,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Text="Podatki ljudi" TextAlignment="Center"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4">
+            <ListBox x:Name="listBoxPeople" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="170" Margin="10"/>
+        </StackPanel>
+
+        <Label Grid.Column="1" Grid.Row="3" Content="Izbrana oseba: "/>
+
+
+        <Label Grid.Column="1" Grid.Row="4" Content="Ime: "/>
+        <TextBox x:Name="txtBoxName" Grid.Column="1" Grid.Row="4" IsEnabled="False" Margin="80,10,15,10" Grid.ColumnSpan="2" />
+
+        <Label Grid.Column="1 " Grid.Row="5" Content="Priimek: "/>
+        <TextBox x:Name="txtBoxSurname" Grid.Column="1" Grid.Row="5" IsEnabled="False" Margin="80,10,15,10" Grid.ColumnSpan="2" />
+
+        <Label Grid.Column="1 " Grid.Row="6" Content="Mesto: "/>
+        <TextBox x:Name="txtBoxCity" Grid.Column="1" Grid.Row="6" IsEnabled="false" Margin="80,10,15,10" Grid.ColumnSpan="2"/>
+
+        <Label Grid.Column="3" Grid.Row="4" Content="Davčna številka: " Grid.ColumnSpan="3" Margin="0,0,150,40" Grid.RowSpan="2" />
+        <TextBox x:Name="txtBoxVatNumber" Grid.Column="4" Grid.Row="4" IsEnabled="False" Margin="10,10,0,10"/>
+
+        <Label Grid.Column="3" Grid.Row="5" Content="Naslov: "/>
+        <TextBox x:Name="txtBoxAdress" Grid.Column="4" Grid.Row="5" IsEnabled="False"  Margin="0,10,0,10"  Width="Auto"/>
+
+        <Label Grid.Column="3" Grid.Row="6" Content="Poštna številka: "/>
+        <TextBox x:Name="txtBoxPostCode" Grid.Column="4" Grid.Row="6" IsEnabled="False" Margin="0,10,0,10"/>
+
+        <StackPanel Grid.Column="5" Grid.Row="2">
+            <Button x:Name="ShowData" Grid.Column="5" Grid.Row="2" Content="Prikaži podatke" Margin="10" Click="ShowData_Click"/>
+            <Button x:Name="btnAdd" Grid.Column="5" Grid.Row="2" Content="Dodaj osebo" Margin="10" Click="btnAdd_Click"/>
+            <Button x:Name="btnEdit" Grid.Column="5" Grid.Row="2" Content="Uredi osebo" IsEnabled="False" Margin="10" Click="btnEdit_Click"/>
+            <Button x:Name="btnDelete" Grid.Column="5" Grid.Row="2" Content="Izbriši osebo" IsEnabled="False" Margin="10" Click="btnDelete_Click"/>
+        </StackPanel>
+
+        <Button x:Name="btnOptionButton" Grid.Column="5" Grid.Row="6" Content="" Margin="10,10,10,10"  IsEnabled="False"  Click="btnOptionButton_Click"/>
+
+
+
+
+
+
+    </Grid>
+</Window>
